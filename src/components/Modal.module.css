@@ -1,0 +1,66 @@
+.fade{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+@keyframes modal {
+    from{
+    
+        opacity: 0;
+        top: 0%;
+    }
+    to{
+        opacity: 1;
+        top: 10%;
+    }
+}
+.modal{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 500px;
+    height: 400px;
+    z-index: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.522);
+    animation-name: modal;
+    animation-duration: .3s;
+    transition: ease-in-out .3s;
+    
+}
+.modal h2{
+    margin-bottom: 1em;
+}
+.modal form{
+    width: 90%;
+}
+.modal i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.750);
+    font-weight: bold;
+    font-size: 1.4em;
+    transition: ease-in-out .2s all;
+}
+.modal i:hover{
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.200);
+}
+
+@media screen and (max-width:600px){
+    .modal{
+        width: 400px;
+    }
+}
